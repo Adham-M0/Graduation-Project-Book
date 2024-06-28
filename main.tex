@@ -1,0 +1,192 @@
+\documentclass[a4paper, 12pt, english]{article}
+
+
+% \usepackage[portuges]{babel}
+\usepackage{fontspec}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{longtable}  % For tables that span multiple pages
+\usepackage{indentfirst}
+\usepackage{verbatim}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{braille}
+\usepackage{relsize}
+\usepackage{caption}
+\usepackage{tabularray}
+\usepackage{subcaption}  % For subfigures
+\usepackage{lipsum}% http://ctan.org/pkg/lipsum
+\usepackage{xcolor}% http://ctan.org/pkg/xcolor
+\usepackage{xparse}% http://ctan.org/pkg/xparse
+\usepackage{float} % Include this package for the [H] option
+\usepackage{changepage} % for adjustwidth environment
+\usepackage{xcolor}
+\usepackage{ulem}
+
+\NewDocumentCommand{\myrule}{O{1pt} O{2pt} O{black}}{%
+  \par\nobreak % don't break a page here
+  \kern\the\prevdepth % don't take into account the depth of the preceding line
+  \kern#2 % space before the rule
+  {\color{#3}\hrule height #1 width\hsize} % the rule
+  \kern#2 % space after the rule
+  \nointerlineskip % no additional space after the rule
+}
+\usepackage[section]{placeins}
+
+\usepackage{booktabs}
+\usepackage{colortbl}%
+   \newcommand{\myrowcolour}{\rowcolor[gray]{0.925}}
+   
+\usepackage[obeyspaces]{url}
+\usepackage{etoolbox}
+\usepackage[colorlinks,citecolor=black,urlcolor=blue,bookmarks=false,hypertexnames=true]{hyperref} 
+
+\usepackage{geometry}
+\geometry{
+	paper=a4paper, % Change to letterpaper for US letter
+	inner=3cm, % Inner margin
+	outer=3cm, % Outer margin
+	bindingoffset=.5cm, % Binding offset
+	top=2cm, % Top margin
+	bottom=2cm, % Bottom margin
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+%*******************************************************************************%
+%************************************START**************************************%
+%*******************************************************************************%
+\begin{document}
+
+%************************************TITLE PAGE**************************************%
+\begin{titlepage}
+\begin{center}
+\textbf{\LARGE ALEXANDRIA UNIVERSITY}\\[0.5cm] 
+\textbf{\large FACULTY OF ENGINEERING}\\[0.2cm]
+\vspace{20pt}
+\includegraphics[scale=0.15]{AlexuLogo.png}\\[1cm]
+
+\par
+\textbf{ELECTRICAL ENGINEERING DEPARTMENT}\\
+\vspace{15pt}
+\textbf{\Large COMMUNICATION AND ELECTRONICS ENGINEERING PROGRAM}
+\vspace{15pt}
+\myrule[1pt][7pt]
+\textbf{\LARGE  Optical Braille Translator}\\
+%\vspace{15pt}
+%\textbf{\large Signal Transmission $\&$ Distortion}\\
+\myrule[1pt][7pt]
+\vspace{25pt}
+
+\textbf{\large Prepared by:}\\[0.2cm]
+
+Abdallah Ashraf\\
+Adham Mohamed\\
+Ahmed Elsayed\\
+Ali Elneklawy\\
+Ayman Feteha\\
+Nada Tarek\\
+Nada Gamal\\
+
+\vspace{45pt}
+\textbf {\large Supervised by:}\\[0.2cm]
+\Large {Dr. Mohamed Moselhy}\\[0.1cm]
+\end{center}
+
+\par
+\vfill
+\begin{center}
+\textbf{ACADEMIC YEAR 2023/2024}\\
+\end{center}
+
+\end{titlepage}
+\newpage
+\input{Sections/Abstract}
+\newpage
+\input{Sections/acknowledgement}
+%************************************TABLE OF CONTENTS**************************************%
+\newpage
+\hypersetup{linkcolor=black}
+\tableofcontents
+%  %Sumário
+%  \newpage
+%  \tableofcontents
+%  \thispagestyle{empty}
+%  %End Sumário
+
+%********************************%
+%***********SECTION 1************%
+%********************************%
+\newpage
+\input{Sections/Introduction}
+
+%********************************%
+%***********SECTION 2************%
+%********************************%
+\newpage
+\input{Sections/LiteratureReview}
+
+
+%********************************%
+%***********SECTION 3************%
+%********************************%
+\newpage
+\input{Sections/System Design and Architecture}
+
+%********************************%
+%***********SECTION 4************%
+%********************************%
+\newpage
+\input{Sections/Preprocessing}
+
+
+%********************************%
+%***********SECTION 5************%
+%********************************%
+\newpage
+\input{Sections/Detection and Recognition Using Image Processing}
+
+
+%********************************%
+%***********SECTION 6************%
+%********************************%
+\newpage
+\input{Sections/Detection Using White Spaces and Recognition using CNN}
+
+
+%********************************%
+%***********SECTION 7************%
+%********************************%
+\newpage
+\input{Sections/Translation, Correction And Text to Speech}
+
+
+
+%********************************%
+%***********SECTION 8************%
+%********************************%
+\newpage
+\input{Sections/GUI, Testing and Results}
+
+
+%********************************%
+%***********SECTION 9************%
+%********************************%
+\newpage
+\input{Sections/Conclusion and Future Work}
+
+
+%********************************%
+%***********SECTION 10************%
+%********************************%
+%-------References-------%
+\newpage
+\input{Sections/References}
+
+
+
+
+
+\end{document}
